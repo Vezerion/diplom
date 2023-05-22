@@ -1,0 +1,233 @@
+.menu
+    position: absolute
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 140px
+    height: 100vh
+    padding: 20px
+    background-color: $colour_two
+    transition: 1s ease-in-out
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &__logo
+            height: 50px
+            width: 100px
+            &__img
+                height: 100%
+                width: 100%
+        &__text
+            display: flex
+            flex-direction: column
+            &-account
+                color: $colour_four
+                font-size: 18px
+                font-weight: 600
+            &-menu__item
+                font-size: 16px
+                font-weight: 300
+    &__button
+        position: absolute
+        left: 76%
+        font-size: 50px
+        text-align: center
+        line-height: 60px
+        top: calc( 50% - 60px )
+        height: 60px
+        width: 60px
+        border-radius: 100%
+        background-color: $colour_two
+        cursor: pointer
+        transform: rotateZ(180deg)
+        transition: 1s ease-in-out
+        
+    &__items
+        margin-top: 40px
+        height: 500px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        &__item
+            padding-left: 10px
+            padding-right: 10px
+            list-style: none
+            display: flex
+            align-items: center
+            height: 55px
+            &__user
+                border-radius: 25px
+                width: 100%
+                cursor: pointer
+                &:hover
+                    background-color: $colour_three
+                &__logo
+                    height: 55px
+                    width: 55px
+                    transition: 1s ease-in-out 0.5s
+                    &__img
+                        border-radius: 100%
+                        height: 100%
+                        width: 100%
+                &__info
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    padding-left: 35px
+                    opacity: 1
+                    transition: 1s ease-in-out 0.5s
+                    &-name
+                        font-size: 26px
+                        font-weight: 500
+                    &-user
+                        font-size: 18px
+                        font-weight: 300
+            &__files
+                border-radius: 25px
+                width: 100%
+                cursor: pointer
+                &:hover
+                    background-color: $colour_three
+                &__icon
+                    font-size: 26px
+                    padding-right: 20px
+                &__header
+                    font-size: 20px
+                    opacity: 1
+                    transition: 1s ease-in-out 0.5s
+            &__contacts
+                border-radius: 25px
+                width: 100%
+                cursor: pointer
+                &:hover
+                    background-color: $colour_three
+                &__icon
+                    font-size: 26px
+                    padding-right: 20px
+                &__header
+                    font-size: 20px
+                    opacity: 1
+                    transition: 1s ease-in-out 0.5s
+            &__settings
+                border-radius: 25px
+                width: 100%
+                cursor: pointer
+                &:hover
+                    background-color: $colour_three
+                &__icon
+                    font-size: 26px
+                    padding-right: 20px
+                &__header
+                    font-size: 20px
+                    opacity: 1
+                    transition: 1s ease-in-out 0.5s
+            &__logout
+                border-radius: 25px
+                width: 100%
+                cursor: pointer
+                &:hover
+                    background-color: $colour_three
+                &__icon
+                    font-size: 26px
+                    padding-right: 20px
+                &__header
+                    opacity: 1
+                    font-size: 20px
+                    transition: 1s ease-in-out 0.5s
+            &__theme
+                display: flex
+                justify-content: space-between
+                align-items: center
+                &__icon
+                    padding-right: 20px
+                    cursor: pointer
+
+
+
+.short
+    .menu
+        &__items
+            &__item
+                &__user
+                    &__info
+                        position: absolute
+                        opacity: 0
+                        z-index: -1
+                        transition: 0s 
+                &__files
+                    justify-content: center
+                    &__icon
+                        padding-right: 0px
+                    &__header
+                        position: absolute
+                        opacity: 0
+                        z-index: -1
+                        transition: 0s 
+                &__contacts
+                    &__icon
+                        padding-right: 0px
+                    &__header
+                        position: absolute
+                        opacity: 0
+                        z-index: -1
+                        transition: 0s 
+                &__settings
+                    &__icon
+                        padding-right: 0px
+                    &__header
+                        position: absolute
+                        opacity: 0
+                        z-index: -1
+                        transition: 0s 
+                &__logout
+                    &__icon
+                        padding-right: 0px
+                    &__header
+                        opacity: 0
+                        z-index: -1
+                        position: absolute
+                        transition: 0s  
+                &__theme
+                    &__icon
+                        padding-right: 0px
+                    &__header
+                        opacity: 0
+                        z-index: -1
+                        position: absolute
+                        transition: 0s 
+.short.menu__items__item 
+    justify-content: center                   
+                    
+.active.menu
+    width: 300px
+    transition: 1s ease-in-out
+    &__button
+        left: 87%
+        transform: rotateZ(0deg)
+        transition: 1s ease-in-out
+.align-baseline.menu__items
+    align-items: flex-start
+    transition: 1s ease-in-out
+
+.theme_active.menu__items__item__theme__wrapper-light
+    display: flex
+.theme_active.menu__items__item__theme__wrapper-dark
+    display: flex
+
+
+body.dark 
+    $colour_one: #000000 
+    $colour_two: #c23131
+    $colour_three: #5938a7
+    $colour_four: #ffffff
+    background-color: $colour_one
+    .menu
+        background-color: $colour_two
+        &__header
+        &__text
+            &-account
+                color: $colour_four
+        &__button
+            background-color: $colour_two
