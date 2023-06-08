@@ -1,6 +1,6 @@
 .footer
     height: 400px
-    background-color: $colour_one
+    background-color: $color_background_secondary
     display: flex
     justify-content: space-around
     align-items: center
@@ -12,16 +12,16 @@
         width: 300px
         &__header
             margin-top: 30px
-            color: $colour_three
+            color: $color_text
             font-size: 26px
             text-align: center
         &__email
-            color: $colour_three
+            color: $color_text
             text-align: center
         &__phone
             text-align: center
             &__link
-                color: $colour_three
+                color: $color_text
     &__path
         width: 600px
         display: flex
@@ -30,7 +30,7 @@
         &__header
             margin-top: 30px
             margin-bottom: 30px
-            color: $colour_three
+            color: $color_text
             font-size: 26px
             text-align: center
         &__map
@@ -43,7 +43,7 @@
         height: 150px
         &__header
             margin-top: 30px
-            color: $colour_three
+            color: $color_text
             font-size: 26px
             text-align: center
         &__links
@@ -55,11 +55,42 @@
             display: flex
             justify-content: space-between
             &__vk
-                color: #fff
+                color: $color_text
                 font-size: 32px
             &__github
-                color: #fff
+                color: $color_text
                 font-size: 32px
             &__telegram
-                color: #fff
+                color: $color_text
                 font-size: 32px
+
+body.dark 
+    $color_text: #e7e7e7  // text #f7edef
+    $color_background_primary: #1b1b1a //body_bg #120809
+    $color_background_secondary: #4a4440 //items_bg #2b1217
+    $color_accent_primary:  #585643 //buttons & hovers #4ab09d  
+    $color_accent_secondary: #e7e7e7 //files #90d0c4 
+    $color_file_bg: #3b342f
+    .footer
+        background-color: $color_background_secondary
+        &__contacts
+            &__header
+                color: $color_text
+            &__email
+                color: $color_text
+            &__phone
+                &__link
+                    color: $color_text
+        &__path
+            &__header
+                color: $color_text
+        &__socials
+            &__header
+                color: $color_text
+            &__links
+                &__vk
+                    color: $color_text
+                &__github
+                    color: $color_text
+                &__telegram
+                    color: $color_text

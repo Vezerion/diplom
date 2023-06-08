@@ -72,27 +72,33 @@
                     <div class="files__manager__navigation__file-type__type">Все файлы</div>
                 </div>
                 <div class="files__manager__navigation__file-view">
-                    <i class="fa-solid fa-bars files__manager__navigation__file-view__item"></i>
-                    <i class="fa-solid fa-grip files__manager__navigation__file-view__item"></i>
+                    <i class="fa-solid fa-bars files__manager__navigation__file-view__item small-view"></i>
+                    <i class="fa-solid fa-grip files__manager__navigation__file-view__item big-view"></i>
                 </div>
                 
             </div>
-            <div class="files__manager__layout">
-                    <div class="files__manager__layout__wrapper">
+            <div class="files__manager__layout"> <!-- big_files -->
+                    <div class="files__manager__layout__wrapper ">
                         <div class="files__manager__layout__item">
                             <i class="fa-solid fa-file-pen files__manager__layout__item__icon"></i>
                             <i class="fa-solid fa-ellipsis-vertical files__manager__layout__item__button"></i>
                             <div class="files__manager__layout__item__name">file name about some fucking shit</div>
+                            <div class="files__manager__layout__item__menu">
+                                <div class="files__manager__layout__item__menu__download">Скачать</div>
+                                <div class="files__manager__layout__item__menu__delete">Удалить</div>
+                                <div class="files__manager__layout__item__menu__info">Инфо</div>
+                            </div>
                         </div>
                     </div>
             </div>
         </div>
     </section>
-    <script src="js/menu.js"></script>
-    <script src="js/dropdown.js"></script>
     <script src="
     https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
     "></script>
+    <script src="js/menu.js"></script>
+    <script src="js/files.js"></script>
+    
     
 </body>
 </html>

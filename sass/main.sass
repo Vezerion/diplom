@@ -1,12 +1,13 @@
 @import 'base/_variables'
 @import 'base/_mixins'
+
 *
     box-sizing: border-box
     margin: 0
     font-family: 'Open Sans', sans-serif
     
 body
-    background-color: $colour_one
+    background-color: $color_background_primary
 
 .container
     margin: 0 auto
@@ -61,9 +62,9 @@ body
     width: 800px
     transition: 2s ease-in-out .5
 .bigger-card[data-name="podrezov"]
-    background: url('../img/podrezov_bg.png') $colour_four  no-repeat
+    background: url('../img/podrezov_bg.png') $color_background_secondary no-repeat
 .bigger-card[data-name="shestakov"]
-    background: url('../img/shestakov_bg.png') $colour_four  no-repeat
+    background: url('../img/shestakov_bg.png') $color_background_secondary  no-repeat
 .wrapper-big
     height: 100%
     width: 400px

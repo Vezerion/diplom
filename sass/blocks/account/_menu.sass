@@ -6,7 +6,8 @@
     width: 140px
     height: 100vh
     padding: 20px
-    background-color: $colour_two
+    background-color: $color_background_secondary
+    color: $color_text
     transition: 1s ease-in-out
     &__header
         display: flex
@@ -18,16 +19,6 @@
             &__img
                 height: 100%
                 width: 100%
-        &__text
-            display: flex
-            flex-direction: column
-            &-account
-                color: $colour_four
-                font-size: 18px
-                font-weight: 600
-            &-menu__item
-                font-size: 16px
-                font-weight: 300
     &__button
         position: absolute
         left: 76%
@@ -38,7 +29,8 @@
         height: 60px
         width: 60px
         border-radius: 100%
-        background-color: $colour_two
+        color: $color_text
+        background-color: $color_accent_primary
         cursor: pointer
         transform: rotateZ(180deg)
         transition: 1s ease-in-out
@@ -57,12 +49,13 @@
             display: flex
             align-items: center
             height: 55px
+            color: $color_text
+            &:hover
+                background-color: $color_accent_primary
             &__user
                 border-radius: 25px
                 width: 100%
                 cursor: pointer
-                &:hover
-                    background-color: $colour_three
                 &__logo
                     height: 55px
                     width: 55px
@@ -88,8 +81,6 @@
                 border-radius: 25px
                 width: 100%
                 cursor: pointer
-                &:hover
-                    background-color: $colour_three
                 &__icon
                     font-size: 26px
                     padding-right: 20px
@@ -101,8 +92,6 @@
                 border-radius: 25px
                 width: 100%
                 cursor: pointer
-                &:hover
-                    background-color: $colour_three
                 &__icon
                     font-size: 26px
                     padding-right: 20px
@@ -114,8 +103,6 @@
                 border-radius: 25px
                 width: 100%
                 cursor: pointer
-                &:hover
-                    background-color: $colour_three
                 &__icon
                     font-size: 26px
                     padding-right: 20px
@@ -127,8 +114,6 @@
                 border-radius: 25px
                 width: 100%
                 cursor: pointer
-                &:hover
-                    background-color: $colour_three
                 &__icon
                     font-size: 26px
                     padding-right: 20px
@@ -218,16 +203,20 @@
 
 
 body.dark 
-    $colour_one: #000000 
-    $colour_two: #c23131
-    $colour_three: #5938a7
-    $colour_four: #ffffff
-    background-color: $colour_one
+    $color_text: #fafafa  // text #f7edef
+    $color_background_primary: #1b1b1a //body_bg #120809
+    $color_background_secondary: #4a4440 //items_bg #2b1217
+    $color_accent_primary:  #585643 //buttons & hovers #4ab09d  
+    $color_accent_secondary: #9ea6ad //files #90d0c4 
+    background-color: $color_background_primary
     .menu
-        background-color: $colour_two
-        &__header
-        &__text
-            &-account
-                color: $colour_four
+        background-color: $color_background_secondary
+        color: $color_text
         &__button
-            background-color: $colour_two
+            color: $color_text
+            background-color: $color_accent_primary
+        &__items
+            &__item
+                color: $color_text
+                &:hover
+                    background-color: $color_accent_primary

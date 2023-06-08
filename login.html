@@ -16,8 +16,13 @@
                 <img src="img/register.svg" alt="">
             </div>
             <div class="signup">
+                
                 <form action="" class="signup__form">
                     <div class="signup__form__header">Зарегистрироваться</div>
+                    <div class="signup__form__input">
+                        <!-- <label for="name">Ваше Имя</label> -->
+                        <input name="login" placeholder="Your Login" type="text" class="signup__form__login">
+                    </div>
                     <div class="signup__form__input">
                         <!-- <label for="name">Ваше Имя</label> -->
                         <input name="name" placeholder="Your Name" type="text" class="signup__form__name">
@@ -28,16 +33,17 @@
                     </div>
                     <div class="signup__form__input">
                         <!-- <label for="sex">Ваш пол</label> -->
-                        <div class="signup__form__sex">
+                        <!-- <div class="signup__form__sex">
                             <label for="sex">Мужской</label>
                             <input name="sex" type="radio" value="0" class="signup__form__sex-male">
                             <label for="sex">Женский</label>
                             <input name="sex" type="radio" value="1" class="input signup__form__sex-female">
-                        </div>
+                        </div> -->
+                        <input name="city" placeholder="Your City" type="text" class="signup__form__city">
                     </div>
                     <div class="signup__form__input">
                         <!-- <label for="date">День Вашего Рождения</label> -->
-                        <input type="date" class="signup__form__birth">
+                        <input type="date" name="date" class="signup__form__birth">
                     </div>
                     <div class="signup__form__input">
                         <!-- <label for="country">Ваша Страна</label> -->
@@ -315,7 +321,7 @@
             <div class="signin">
                 <form action="" class="signin__form">
                     <div class="signin__form__header">Войти</div>
-                    <input placeholder="Your Email" type="email" class="signin__form__email">
+                    <input placeholder="Your Login" type="text" class="signin__form__login">
                     <input placeholder="Your Password" type="password" class="signin__form__password">
                     <button class="signin__form__button">Войти</button>
                 </form>
@@ -328,5 +334,10 @@
         </div>
     </section>
 <script src="js/login.js"></script>
+<script src="
+    https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
+    "></script>
+<script src="js/theme_check.js"></script>
+<script src="js/registration.js"></script>
 </body>
 </html>

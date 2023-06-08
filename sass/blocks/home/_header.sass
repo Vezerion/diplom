@@ -1,7 +1,7 @@
 .header
     display: flex
     justify-content: space-between
-    background-color: $colour_one
+    background-color: $color_background_secondary
     &__navigation
         height: 60px
         width: 100%
@@ -30,7 +30,26 @@
                     text-align: center
                     width: 130%
                     display: inline-block
-                    color: #fff
+                    color: $color_text
                     text-decoration: none
                     &:hover
-                        background-color: $colour_three
+                        background-color: $color_accent_primary
+
+
+
+body.dark 
+    $color_text: #e7e7e7  // text #f7edef
+    $color_background_primary: #1b1b1a //body_bg #120809
+    $color_background_secondary: #4a4440 //items_bg #2b1217
+    $color_accent_primary:  #585643 //buttons & hovers #4ab09d  
+    $color_accent_secondary: #e7e7e7 //files #90d0c4 
+    $color_file_bg: #3b342f
+    .header
+        background-color: $color_background_secondary
+        &__navigation
+            &__list
+                &__item
+                    &__link
+                        color: $color_text
+                        &:hover
+                            background-color: $color_accent_primary

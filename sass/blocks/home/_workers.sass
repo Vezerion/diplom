@@ -9,7 +9,7 @@
         width: 800px
         font-weight: 400
         font-size: 48px
-        color: #fff
+        color: $color_text
     &__cards
         width: 800px
         margin: 0 auto
@@ -31,6 +31,7 @@
             transform: translateY(100px)
             opacity: 0
             transition: all 1s ease
+            background-color: $color_background_secondary
             &__wrapper
                 display: flex
                 flex-direction: column
@@ -46,10 +47,10 @@
             &__name
                 margin-top: 20px
                 font-size: 20px
-                color: #fff
+                color: $color_text
             &__description
                 font-weight: 300
-                color: $colour_three
+                color: $color_text
             &__info
                 opacity: 0
                 display: none
@@ -64,15 +65,46 @@
                 border: 1px solid rgba(0, 0, 0, 0)
                 animation: border 3s infinite
                 border-radius: 10px
-                color: #fff
+                color: $color_text
                 &:hover
-                    background-color: $colour_three
+                    background-color: $color_accent_primary
                 
 @keyframes border
     0%
-        border: 1px solid $colour_three
+        border: 1px solid $color_text
     50%
         border: 1px solid rgba(0, 0, 0, 0)
     100%
-        border: 1px solid $colour_three
+        border: 1px solid $color_text
                    
+
+
+
+body.dark 
+    $color_text: #e7e7e7  // text #f7edef
+    $color_background_primary: #1b1b1a //body_bg #120809
+    $color_background_secondary: #4a4440 //items_bg #2b1217
+    $color_accent_primary:  #585643 //buttons & hovers #4ab09d  
+    $color_accent_secondary: #e7e7e7 //files #90d0c4 
+    $color_file_bg: #3b342f
+    .workers
+        &__header
+            color: $color_text
+        &__cards
+            &__card
+                background-color: $color_accent_primary
+                &__name
+                    color: $color_text
+                &__description
+                    color: $color_text
+                &__button
+                    color: $color_text
+                    &:hover
+                        background-color: $color_accent_primary      
+    @keyframes border
+        0%
+            border: 1px solid $color_text
+        50%
+            border: 1px solid rgba(0, 0, 0, 0)
+        100%
+            border: 1px solid $color_text

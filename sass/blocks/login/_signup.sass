@@ -5,6 +5,7 @@
     position: relative
     text-align: center
     display: flex
+    flex-direction: column
     width: 325px
     opacity: 0
     transform: translateX(55%)
@@ -34,7 +35,7 @@
         &__header
             margin-bottom: 25px
             font-size: 28px
-            color: #fff
+            color: $color_text
             text-align: center
         &__button
             margin: 0 auto
@@ -93,14 +94,14 @@
   top: 5%
   right: 40%
   transform: translate(0%, -50%)
-  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%)
+  background-image: linear-gradient(-45deg, $color_accent_primary 0%, $color_accent_secondary 100%)
   transition: 1.8s ease-in-out
   border-radius: 50%
   z-index: 8
 
 .login-body
     overflow: hidden
-    background-color: #ecd1aa
+    background-color: $color_background_primary
 .form__containers
     margin-top: 20%
     justify-content: space-between
@@ -154,7 +155,7 @@
         &__header
             margin-bottom: 25px
             font-size: 28px
-            color: #fff
+            color: $color_text
             text-align: center
         &__button
             margin: 0 auto
@@ -189,3 +190,52 @@
         transform: translateX(-180%)
         transition: 1s ease-in-out 
 
+
+body.dark 
+    $color_text: #e7e7e7  // text #f7edef
+    $color_background_primary: #1b1b1a //body_bg #120809
+    $color_background_secondary: #4a4440 //items_bg #2b1217
+    $color_accent_primary:  #585643 //buttons & hovers #4ab09d  
+    $color_accent_secondary: #e7e7e7 //files #90d0c4 
+    $color_file_bg: #3b342f
+    .signup
+        &__form
+            background-color: $color_background_secondary
+            &__header
+                color: $color_text
+            &__sex
+                label
+                    color: $color_text
+        &__promo
+            &__header
+                color: $color_text
+            &__button
+                color: $color_text
+                background-color: $color_accent_primary
+        &__button
+                color: $color_text
+                background-color: $color_accent_primary
+
+    &__form
+        select
+            background-color: #fff
+    .login:before 
+        background-image: linear-gradient(-45deg, $color_accent_primary 0%, $color_accent_secondary 100%)
+
+    .login-body
+        background-color: $color_background_primary
+
+    .signin
+        &__form
+            background-color: $color_background_secondary
+            &__header
+                color: $color_text
+            &__button
+                color: $color_text
+                background-color: $color_accent_primary
+        &__promo
+            &__header
+                color: $color_text
+            &__button
+                color: $color_text
+                background-color: $color_accent_primary
